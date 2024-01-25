@@ -1,0 +1,34 @@
+name: "Test"
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+    tags:
+      - 'v*'
+
+
+jobs:
+  client-by-default:
+    runs-on: ubuntu-latest
+    name: client warp+doh mode by default
+    steps:
+      - uses: fscarmen/warp-on-actions@v1.0
+
+  client:
+    runs-on: ubuntu-latest
+    name: client warp+doh mode
+    steps:
+      - name: Set up WARP with client
+        uses: fscarmen/warp-on-actions@v1.0
+        with:
+          mode: client
+
+  wireguard:
+    runs-on: ubuntu-latest
+    name: wireguard mode
+    steps:
+      - name: Set up WARP with wireguard
+        uses: fscarmen/warp-on-actions@v1.0
+        with:
+          mode: wireguard
