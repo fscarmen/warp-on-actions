@@ -7,28 +7,39 @@ on:
     tags:
       - 'v*'
 
-
 jobs:
-  client-by-default:
+  client-dual-by-default:
     runs-on: ubuntu-latest
     name: client warp+doh mode by default
     steps:
-      - uses: fscarmen/warp-on-actions@v1.0
+      - uses: fscarmen/warp-on-actions@v1.1
 
-  client:
+  client-ipv4:
     runs-on: ubuntu-latest
-    name: client warp+doh mode
+    name: client warp+doh mode with ipv4
     steps:
-      - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.0
+      - name: Set up WARP with client with ipv4
+        uses: fscarmen/warp-on-actions@v1.1
         with:
           mode: client
+          stack: ipv4
 
-  wireguard:
+  client-ipv6:
     runs-on: ubuntu-latest
-    name: wireguard mode
+    name: client warp+doh mode with ipv6
     steps:
-      - name: Set up WARP with wireguard
-        uses: fscarmen/warp-on-actions@v1.0
+      - name: Set up WARP with client
+        uses: fscarmen/warp-on-actions@v1.1
         with:
-          mode: wireguard
+          mode: client
+          stack: ipv6
+
+  client-dual:
+    runs-on: ubuntu-latest
+    name: client warp+doh mode with dual
+    steps:
+      - name: Set up WARP with client
+        uses: fscarmen/warp-on-actions@v1.1
+        with:
+          mode: client
+          stack: dual
