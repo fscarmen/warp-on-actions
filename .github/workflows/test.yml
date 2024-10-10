@@ -12,16 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     name: client warp+doh mode by default
     steps:
-      - uses: fscarmen/warp-on-actions@v1.1
+      - uses: fscarmen/warp-on-actions@v1.2
 
   client-ipv4:
     runs-on: ubuntu-latest
     name: client warp+doh mode with ipv4
     steps:
       - name: Set up WARP with client with ipv4
-        uses: fscarmen/warp-on-actions@v1.1
+        uses: fscarmen/warp-on-actions@v1.2
         with:
-          mode: client
           stack: ipv4
 
   client-ipv6:
@@ -29,9 +28,8 @@ jobs:
     name: client warp+doh mode with ipv6
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.1
+        uses: fscarmen/warp-on-actions@v1.2
         with:
-          mode: client
           stack: ipv6
 
   client-dual:
@@ -39,7 +37,6 @@ jobs:
     name: client warp+doh mode with dual
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.1
+        uses: fscarmen/warp-on-actions@v1.2
         with:
-          mode: client
           stack: dual

@@ -6,7 +6,7 @@
 client warp+doh mode
 ```
   - name: Set up WARP
-    uses: fscarmen/warp-on-actions@v1.1
+    uses: fscarmen/warp-on-actions@v1.2
     with:
       stack: dual   # Optional. Support [ ipv4, ipv6, dual ]. Default is dual.
 ```

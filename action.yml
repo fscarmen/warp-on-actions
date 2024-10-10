@@ -23,9 +23,9 @@ runs:
         sudo warp-cli --accept-tos registration new
         sudo warp-cli --accept-tos mode warp+doh
         if [ "${{ inputs.stack }}" == 'ipv4' ]; then
-          sudo warp-cli --accept-tos add-excluded-route ::/0
+          sudo warp-cli --accept-tos tunnel ip add-range ::0/0
         elif [ "${{ inputs.stack }}" == 'ipv6' ]; then
-          sudo warp-cli --accept-tos add-excluded-route 0.0.0.0/0
+          sudo warp-cli --accept-tos tunnel ip add-range 0.0.0.0/0
         fi
         sudo warp-cli --accept-tos connect
 
