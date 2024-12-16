@@ -47,13 +47,13 @@ jobs:
           mode: client
 
   wireguard-dual-by-default:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: wireguard mode by default
     steps:
       - uses: fscarmen/warp-on-actions@v1.3
 
   wireguard-ipv4:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: wireguard mode with ipv4
     steps:
       - name: Set up WARP with client with ipv4
@@ -63,7 +63,7 @@ jobs:
           mode: wireguard
 
   wireguard-ipv6:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: wireguard mode with ipv6
     steps:
       - name: Set up WARP with client
@@ -73,7 +73,7 @@ jobs:
           mode: wireguard
 
   wireguard-dual:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: wireguard mode with dual
     steps:
       - name: Set up WARP with client
