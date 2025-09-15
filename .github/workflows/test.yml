@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: client warp+doh mode by default
     steps:
-      - uses: fscarmen/warp-on-actions@v1.3
+      - uses: fscarmen/warp-on-actions@v1.4
         with:
           mode: client
 
@@ -21,7 +21,7 @@ jobs:
     name: client warp+doh mode with ipv4
     steps:
       - name: Set up WARP with client with ipv4
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: ipv4
           mode: client
@@ -31,7 +31,7 @@ jobs:
     name: client warp+doh mode with ipv6
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: ipv6
           mode: client
@@ -41,43 +41,43 @@ jobs:
     name: client warp+doh mode with dual
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: dual
           mode: client
 
   wireguard-dual-by-default:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     name: wireguard mode by default
     steps:
-      - uses: fscarmen/warp-on-actions@v1.3
+      - uses: fscarmen/warp-on-actions@v1.4
 
   wireguard-ipv4:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     name: wireguard mode with ipv4
     steps:
       - name: Set up WARP with client with ipv4
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: ipv4
           mode: wireguard
 
   wireguard-ipv6:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     name: wireguard mode with ipv6
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: ipv6
           mode: wireguard
 
   wireguard-dual:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     name: wireguard mode with dual
     steps:
       - name: Set up WARP with client
-        uses: fscarmen/warp-on-actions@v1.3
+        uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: dual
           mode: wireguard

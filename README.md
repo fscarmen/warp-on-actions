@@ -6,7 +6,7 @@
 
 ```
   - name: Set up WARP
-    uses: fscarmen/warp-on-actions@v1.3
+    uses: fscarmen/warp-on-actions@v1.4
     with:
       stack: dual        # Optional. Support [ ipv4, ipv6, dual ]. Default is dual.
       mode: wireguard    # Optional. Support [ wireguard, client ]. Default is wireguard.
